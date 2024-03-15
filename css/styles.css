@@ -23,6 +23,7 @@
   text-shadow: 1px 1px 1px #ff6a28;
   margin-left: -3px;
   box-shadow: 2px 2px 2px #000000;
+  cursor: pointer;
 }
 .barra-de-topo input[type=submit]:hover {
   color: #ff6a28;
@@ -32,8 +33,9 @@
   padding: 10px;
   border-radius: 10px 0px 0px 10px;
   border: none;
-  width: 350px;
+  width: 370px;
   box-shadow: 2px 2px 5px #000000;
+  outline: none;
 }
 .barra-de-topo img {
   width: 250px;
@@ -41,7 +43,7 @@
 }
 
 #cabecalho {
-  background-image: url("../image/bollo.jpg");
+  background-image: url("../image/hero_bolo.jpg");
   background-size: cover;
   background-position: center;
   height: 550px;
