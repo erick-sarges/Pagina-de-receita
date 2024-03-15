@@ -1,0 +1,14 @@
+@mixin reset {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Open-Sans, Arial, Helvetica, sans-serif;
+}
+
+@mixin header{
+    background-image: url("../image/hero_bolo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+
+}
