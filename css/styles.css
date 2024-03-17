@@ -5,6 +5,10 @@ body, html {
   font-family: Open-Sans, Arial, Helvetica, sans-serif;
 }
 
+body {
+  font-size: 20px;
+}
+
 @font-face {
   font-family: Open-Sans;
   src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
@@ -52,7 +56,7 @@ body, html {
 .content {
   max-width: 990px;
   margin: auto;
-  padding: 40px;
+  padding: 0 40px;
   margin-top: 100px;
 }
 .content h1, .content h2 {
@@ -82,6 +86,9 @@ body, html {
 .content .preparo {
   cursor: url("../assets/icons8-soup-plate-30.png"), default;
 }
+.content .instrucoes {
+  cursor: url("../assets/icons8-talheres-30.png"), default;
+}
 .content a {
   text-decoration: none;
   background-color: #ff6a28;
@@ -94,6 +101,25 @@ body, html {
 }
 .content li {
   margin-bottom: 14px;
+}
+.content p, .content li {
+  line-height: 28px;
+}
+
+footer {
+  background-color: #ff6a28;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+footer p {
+  max-width: 500px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 24px;
+}
+footer a {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

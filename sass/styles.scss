@@ -4,7 +4,9 @@
 body,html {
     @include reset;
 }
-
+body{
+    font-size: 20px;
+}
 @font-face {
     font-family: Open-Sans;
     src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
@@ -89,6 +91,10 @@ body,html {
     .preparo{
         cursor: url("../assets/icons8-soup-plate-30.png"),default;
     }
+
+    .instrucoes{
+        cursor: url("../assets/icons8-talheres-30.png"),default;
+    }
     a{
         text-decoration: none;
         background-color: $prymary-color;
@@ -102,4 +108,24 @@ body,html {
     li{
         margin-bottom: 14px;
     }
+    p,li{
+        line-height: 28px;
+    }
+}
+
+footer{
+    background-color: $prymary-color;
+    color: #ffff;
+    padding: 15px;
+    text-align: center;
+    p{
+        max-width: 500px;
+        margin: auto;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    a{
+        color:white;
+    }
+
 }
