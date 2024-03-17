@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin reset {
     margin: 0px;
     padding: 0px;
@@ -5,10 +7,17 @@
     font-family: Open-Sans, Arial, Helvetica, sans-serif;
 }
 
-@mixin header{
-    background-image: url("../image/hero_bolo.jpg");
+@mixin bg-image($image) {
+    background-image: url("../image/#{$image}");
     background-size: cover;
     background-position: center;
-    height: 550px;
 
 }
+
+@mixin content-main{
+    max-width: 990px;
+    margin: auto;
+    padding: 40px;
+    margin-top: 100px;
+}
+

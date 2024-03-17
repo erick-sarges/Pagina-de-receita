@@ -1,4 +1,4 @@
-* {
+body, html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -9,12 +9,12 @@
   font-family: Open-Sans;
   src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
-.barra-de-topo {
+.barra-topo {
   background-color: #ff6a28;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
 }
-.barra-de-topo input[type=submit] {
+.barra-topo input[type=submit] {
   padding: 10px;
   border-radius: 0px 10px 10px 0px;
   background-color: white;
@@ -25,11 +25,11 @@
   box-shadow: 2px 2px 2px #000000;
   cursor: pointer;
 }
-.barra-de-topo input[type=submit]:hover {
+.barra-topo input[type=submit]:hover {
   color: #ff6a28;
   text-shadow: 1px 1px 1px #000000;
 }
-.barra-de-topo input[type=text] {
+.barra-topo input[type=text] {
   padding: 10px;
   border-radius: 10px 0px 0px 10px;
   border: none;
@@ -37,16 +37,63 @@
   box-shadow: 2px 2px 5px #000000;
   outline: none;
 }
-.barra-de-topo img {
+.barra-topo img {
   width: 250px;
   border-radius: 2px;
 }
 
 #cabecalho {
+  height: 430px;
   background-image: url("../image/hero_bolo.jpg");
   background-size: cover;
   background-position: center;
-  height: 550px;
+}
+
+.content {
+  max-width: 990px;
+  margin: auto;
+  padding: 40px;
+  margin-top: 100px;
+}
+.content h1, .content h2 {
+  color: #ff6a28;
+}
+.content h1 {
+  font-size: 48px;
+}
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.content-cartao {
+  padding: 70px 100px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.content-cartao:hover {
+  box-shadow: 8px 8px 15px 12px rgba(205, 205, 205, 0.25);
+}
+.content-lista-ingredientes {
+  margin-bottom: 50px;
+}
+.content .ingredientes {
+  cursor: url("../assets/icons8-carrinho-de-compras-30.png"), default;
+}
+.content .preparo {
+  cursor: url("../assets/icons8-soup-plate-30.png"), default;
+}
+.content a {
+  text-decoration: none;
+  background-color: #ff6a28;
+  padding: 16px;
+  border-radius: 20px;
+  color: white;
+}
+.content a:hover {
+  background-color: rgba(255, 106, 40, 0.6666666667);
+}
+.content li {
+  margin-bottom: 14px;
 }
 
 /*# sourceMappingURL=styles.css.map */

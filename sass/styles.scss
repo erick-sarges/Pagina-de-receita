@@ -1,8 +1,8 @@
-@use "variables";
-@use "mixins";
+@import "variables";
+@import "mixins";
 
-* {
-    @include mixins.reset;
+body,html {
+    @include reset;
 }
 
 @font-face {
@@ -10,35 +10,37 @@
     src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
-.barra-de-topo {
-    background-color: variables.$prymary-color;
-    padding: 15px;
+.barra-topo {
+    background-color: $prymary-color;
+    padding: 10px;
     text-align: center;
 
     input[type="submit"] {
         padding: 10px;
         border-radius: 0px 10px 10px 0px;
 
-        background-color: variables.$tertiary-color;
+        background-color: $tertiary-color;
         border: none;
         font-weight: bold;
-        text-shadow: 1px 1px 1px variables.$prymary-color;
+        text-shadow: 1px 1px 1px $prymary-color;
         margin-left: -3px;
-        box-shadow: 2px 2px 2px variables.$secondary-color;
+        box-shadow: 2px 2px 2px $secondary-color;
         cursor: pointer;
-        &:hover{
-            color: variables.$prymary-color;
-            text-shadow: 1px 1px 1px variables.$secondary-color;
-            
+
+        &:hover {
+            color: $prymary-color;
+            text-shadow: 1px 1px 1px $secondary-color;
+
         }
-      
+
     }
-    input[type="text"]{
+
+    input[type="text"] {
         padding: 10px;
         border-radius: 10px 0px 0px 10px;
         border: none;
         width: 370px;
-        box-shadow: 2px 2px 5px variables.$secondary-color;
+        box-shadow: 2px 2px 5px $secondary-color;
         outline: none;
 
     }
@@ -50,6 +52,54 @@
 
 }
 
-#cabecalho{
-@include mixins.header;
+#cabecalho {
+    height: 430px;
+    @include bg-image("hero_bolo.jpg");
+
+}
+
+
+.content{
+    @include content-main;
+    h1,h2{
+        color: $prymary-color;
+    }
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    &-cartao{
+        padding: 70px 100px;
+        margin-top: 50px;
+        border-radius: 20px;
+        &:hover{
+            box-shadow:8px 8px 15px 12px rgba(205, 205, 205, 0.25);
+        }
+    }
+    &-lista-ingredientes{
+        margin-bottom: 50px;
+    }
+
+    .ingredientes{
+        cursor: url("../assets/icons8-carrinho-de-compras-30.png"),default;
+    }
+    .preparo{
+        cursor: url("../assets/icons8-soup-plate-30.png"),default;
+    }
+    a{
+        text-decoration: none;
+        background-color: $prymary-color;
+        padding: 16px;
+        border-radius: 20px;
+        color: #ffff;
+        &:hover{
+            background-color: #ff6a28aa;
+        }
+    }
+    li{
+        margin-bottom: 14px;
+    }
 }
