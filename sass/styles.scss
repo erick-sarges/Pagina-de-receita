@@ -1,12 +1,15 @@
 @import "variables";
 @import "mixins";
 
-body,html {
+body,
+html {
     @include reset;
 }
-body{
+
+body {
     font-size: 20px;
 }
+
 @font-face {
     font-family: Open-Sans;
     src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf");
@@ -17,10 +20,15 @@ body{
     padding: 10px;
     text-align: center;
 
+
     input[type="submit"] {
+
+        @include mobile {
+            padding: 5px;
+        }
+
         padding: 10px;
         border-radius: 0px 10px 10px 0px;
-
         background-color: $tertiary-color;
         border: none;
         font-weight: bold;
@@ -35,9 +43,18 @@ body{
 
         }
 
+
     }
 
     input[type="text"] {
+
+        @include mobile {
+            width: 150px;
+            padding: 5px;
+
+
+        }
+
         padding: 10px;
         border-radius: 10px 0px 0px 10px;
         border: none;
@@ -58,74 +75,133 @@ body{
     height: 430px;
     @include bg-image("hero_bolo.jpg");
 
+    @include mobile {
+        height: 200px;
+    }
+
 }
 
 
-.content{
+.content {
     @include content-main;
-    h1,h2{
+
+    @include mobile {
+        margin-top: 50px;
+    }
+
+    h1,
+    h2 {
         color: $prymary-color;
     }
-    h1{
+
+    h1 {
         font-size: 48px;
+
+        @include mobile {
+            font-size: 38px;
+        }
     }
-    h2{
+
+    h2 {
         font-size: 28px;
         margin-bottom: 40px;
+
+        @include mobile {
+            font-size: 25px;
+        }
     }
-    &-cartao{
+
+    &-cartao {
         padding: 70px 100px;
         margin-top: 50px;
         border-radius: 20px;
-        &:hover{
-            box-shadow:8px 8px 15px 12px rgba(205, 205, 205, 0.25);
+
+        @include mobile {
+            padding: 35px 50px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        &:hover {
+            box-shadow: 8px 8px 15px 12px rgba(205, 205, 205, 0.25);
         }
     }
-    &-lista-ingredientes{
+
+    &-lista-ingredientes {
         margin-bottom: 50px;
+        @include mobile {
+            transform: translateX(-50px);
+        }
     }
 
-    .ingredientes{
-        cursor: url("../assets/icons8-carrinho-de-compras-30.png"),default;
-    }
-    .preparo{
-        cursor: url("../assets/icons8-soup-plate-30.png"),default;
+    .ingredientes {
+        cursor: url("../assets/icons8-carrinho-de-compras-30.png"), default;
     }
 
-    .instrucoes{
-        cursor: url("../assets/icons8-talheres-30.png"),default;
+    .preparo {
+        cursor: url("../assets/icons8-soup-plate-30.png"), default;
+        ol{
+            @include mobile {
+                transform: translateX(-50px);
+            }
+        }
     }
-    a{
+
+    .instrucoes {
+        cursor: url("../assets/icons8-talheres-30.png"), default;
+
+        p {
+            @include mobile {
+                line-height: 30px;
+               
+            }
+        }
+    }
+
+    a {
         text-decoration: none;
         background-color: $prymary-color;
         padding: 16px;
         border-radius: 20px;
         color: #ffff;
-        &:hover{
+
+        @include mobile {
+            padding: 14px;
+            font-size: 17px;
+            font-weight: bold;
+
+        }
+
+        &:hover {
             background-color: #ff6a28aa;
         }
     }
-    li{
+
+    li {
         margin-bottom: 14px;
     }
-    p,li{
+
+    p,
+    li {
         line-height: 28px;
     }
 }
 
-footer{
+footer {
     background-color: $prymary-color;
     color: #ffff;
     padding: 15px;
     text-align: center;
-    p{
+
+    p {
         max-width: 500px;
         margin: auto;
         font-size: 16px;
         line-height: 24px;
     }
-    a{
-        color:white;
+
+    a {
+        color: white;
     }
 
 }

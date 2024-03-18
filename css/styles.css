@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -29,6 +30,11 @@ body {
   box-shadow: 2px 2px 2px #000000;
   cursor: pointer;
 }
+@media (max-width: 430px) {
+  .barra-topo input[type=submit] {
+    padding: 5px;
+  }
+}
 .barra-topo input[type=submit]:hover {
   color: #ff6a28;
   text-shadow: 1px 1px 1px #000000;
@@ -41,6 +47,12 @@ body {
   box-shadow: 2px 2px 5px #000000;
   outline: none;
 }
+@media (max-width: 430px) {
+  .barra-topo input[type=text] {
+    width: 150px;
+    padding: 5px;
+  }
+}
 .barra-topo img {
   width: 250px;
   border-radius: 2px;
@@ -52,6 +64,11 @@ body {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 430px) {
+  #cabecalho {
+    height: 200px;
+  }
+}
 
 .content {
   max-width: 990px;
@@ -59,20 +76,43 @@ body {
   padding: 0 40px;
   margin-top: 100px;
 }
-.content h1, .content h2 {
+@media (max-width: 430px) {
+  .content {
+    margin-top: 50px;
+  }
+}
+.content h1,
+.content h2 {
   color: #ff6a28;
 }
 .content h1 {
   font-size: 48px;
 }
+@media (max-width: 430px) {
+  .content h1 {
+    font-size: 38px;
+  }
+}
 .content h2 {
   font-size: 28px;
   margin-bottom: 40px;
+}
+@media (max-width: 430px) {
+  .content h2 {
+    font-size: 25px;
+  }
 }
 .content-cartao {
   padding: 70px 100px;
   margin-top: 50px;
   border-radius: 20px;
+}
+@media (max-width: 430px) {
+  .content-cartao {
+    padding: 35px 50px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
 }
 .content-cartao:hover {
   box-shadow: 8px 8px 15px 12px rgba(205, 205, 205, 0.25);
@@ -80,14 +120,29 @@ body {
 .content-lista-ingredientes {
   margin-bottom: 50px;
 }
+@media (max-width: 430px) {
+  .content-lista-ingredientes {
+    transform: translateX(-50px);
+  }
+}
 .content .ingredientes {
   cursor: url("../assets/icons8-carrinho-de-compras-30.png"), default;
 }
 .content .preparo {
   cursor: url("../assets/icons8-soup-plate-30.png"), default;
 }
+@media (max-width: 430px) {
+  .content .preparo ol {
+    transform: translateX(-50px);
+  }
+}
 .content .instrucoes {
   cursor: url("../assets/icons8-talheres-30.png"), default;
+}
+@media (max-width: 430px) {
+  .content .instrucoes p {
+    line-height: 30px;
+  }
 }
 .content a {
   text-decoration: none;
@@ -96,13 +151,21 @@ body {
   border-radius: 20px;
   color: white;
 }
+@media (max-width: 430px) {
+  .content a {
+    padding: 14px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
 .content a:hover {
   background-color: rgba(255, 106, 40, 0.6666666667);
 }
 .content li {
   margin-bottom: 14px;
 }
-.content p, .content li {
+.content p,
+.content li {
   line-height: 28px;
 }
 
